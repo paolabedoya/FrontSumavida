@@ -1,13 +1,9 @@
 // import Header from "./components/Header/Header"
 // import { BrowserRouter, Outlet } from 'react-router-dom'
+import { Navigation } from './components/Navigation'
 
 function App() {
-
-  return (
-    <div>
-      app
-    </div>
-  )
+  return <Navigation />
 }
 
 export default App

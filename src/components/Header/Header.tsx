@@ -1,4 +1,5 @@
 import { StyledHeader, HeaderLeftSide, HeaderRightSide } from "./styles"
+import { NavLink } from "react-router-dom"
 
 function Header() {
     return (
@@ -6,11 +7,11 @@ function Header() {
             <HeaderLeftSide>
                 <img src="/logosumavida.jpg" />
                 <nav>
-                    <a href="*">Home</a>
-                    <a href="*">Nosotros</a>
-                    <a href="*">Servicio</a>
-                    <a href="*">Calendario</a>
-                    <a href="*">Contacto</a>
+                    <NavLink to={"/inicio"}>Home</NavLink>
+                    <NavLink to={"/nosotros"}>Nosotros</NavLink>
+                    <NavLink to={"/servicios"}>Servicio</NavLink>
+                    <NavLink to={"/calendario"}>Calendario</NavLink>
+                    <NavLink to={"/contacto"}>Contacto</NavLink>
                 </nav>
             </HeaderLeftSide>
             <HeaderRightSide>
