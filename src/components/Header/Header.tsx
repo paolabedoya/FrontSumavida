@@ -7,7 +7,7 @@ function Header() {
             <HeaderLeftSide>
                 <img src="/logosumavida.jpg" />
                 <nav>
-                    <NavLink to={"/inicio"}>Home</NavLink>
+                    <NavLink to={"/"}>Home</NavLink>
                     <NavLink to={"/nosotros"}>Nosotros</NavLink>
                     <NavLink to={"/servicios"}>Servicio</NavLink>
                     <NavLink to={"/calendario"}>Calendario</NavLink>

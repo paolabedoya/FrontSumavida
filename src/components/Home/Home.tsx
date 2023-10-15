@@ -1,8 +1,8 @@
-import React from "react";
 import { Slider } from "../Slider/Slider";
 import ImgAlimentacion from '../../assets/alimentacion.png'
 import ImgCompromiso from '../../assets/compromiso.png'
 import ImgDeporte from '../../assets/deporte.png'
+import ImgNutricion from '../../assets/nutricion.jpeg'
 import styled from 'styled-components'
 
 const ProfessionalsContainer = styled.div`
@@ -45,6 +45,33 @@ const StyledFeaturesContainer = styled.div`
         font-size: 30px;
         color: #9D1519;
     }
+`
+
+const NutritionServices = styled.div`
+    padding: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 6rem;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h4 {
+            max-width: 300px;
+            color: #9d1519;
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+        }
+        img {
+            width: 300px;
+        }
+    }
+
 `
 
 
@@ -109,6 +136,34 @@ export function Home() {
                     <span className="professional-name">Cuenca</span>
                 </div>
             </ProfessionalsContainer>
+            <h1 style={{
+                fontWeight: 'normal',
+                color: '#9d1519',
+                textAlign: 'center',
+                fontSize: '40px'
+            }}>Servicios de nutricion</h1>
+            <NutritionServices>
+                <div>
+                    <img src={ImgNutricion} alt="imagen nutricion" />
+                    <h4>Menus semanales</h4>
+                </div>
+                <div>
+                    <img src={ImgNutricion} alt="imagen nutricion" />
+                    <h4>Control de peso cada semana</h4>
+                </div>
+                <div>
+                    <img src={ImgNutricion} alt="imagen nutricion" />
+                    <h4>Guia diaria</h4>
+                </div>
+                <div>
+                    <img src={ImgNutricion} alt="imagen nutricion" />
+                    <h4>Deporte en grupo</h4>
+                </div>
+                <div>
+                    <img src={ImgNutricion} alt="imagen nutricion" />
+                    <h4>Control presencial o virtual 1 vez por mes</h4>
+                </div>
+            </NutritionServices>
         </>
     )
 }
