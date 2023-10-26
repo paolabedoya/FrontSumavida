@@ -17,7 +17,10 @@ export const StyledFooterContainer = styled.footer`
 
 export const FooterContent = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
     width: 70%;
     & > div {
         h5 {
