@@ -4,6 +4,8 @@ import ImgCompromiso from '../../assets/compromiso.png'
 import ImgDeporte from '../../assets/deporte.png'
 import ImgNutricion from '../../assets/nutricion.jpeg'
 import styled from 'styled-components'
+import { useContext } from "react";
+import LoginContext from "../../context/LoginContext";
 
 const ProfessionalsContainer = styled.div`
     background-color: #9D1519;
@@ -76,6 +78,7 @@ const NutritionServices = styled.div`
 
 
 export function Home() {
+    const context = useContext(LoginContext)
     return (
         <>
             <Slider />

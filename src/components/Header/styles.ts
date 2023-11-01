@@ -35,7 +35,9 @@ export const HeaderLeftSide = styled.div`
 `
 
 export const HeaderRightSide = styled.div`
+    .loginbutton,
     button {
+        text-decoration: none;
         @media (max-width: 730px) {
             display: none;
         }
@@ -96,11 +98,50 @@ export const BurgerMenu = styled.div<{ isOpen: boolean }>`
 export const BurgerMenuContent = styled.div<{ isOpen: boolean }>`
     position: absolute;
     height: 100%;
-    width: 85%;
+    width: 40%;
     background-color: #f8f9fa;
-    right: 0;
     top: 0;
     transition: right .3s ease-out;
+    transition: display .3s ease-out;
     z-index: 0;
     right: ${({isOpen}) => isOpen ? '0' : '-40rem'};
+    display: ${({isOpen}) => isOpen ? 'block' : 'none'};
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 8rem;
+        a {
+            padding: 1rem;
+            text-decoration: none;
+            color: #575757;
+            transition: color .2s ease-in-out;
+            width: 100%;
+            text-align: center;
+            &:hover {
+                color: #9d1519;
+                background-color: #dee3e7;
+            }
+        }
+
+        .loginbutton {
+            text-decoration: none;
+            background-color: transparent;
+            border: 1px solid #9d1519;
+            border-radius: 7px;
+            font-size: 15px;
+            padding: 6px 12px;
+            width: 80%;
+            color: #9d1519;
+            cursor: pointer;
+            transition: background-color .2s ease-in;
+            margin-top: 1rem;
+
+            &:hover {
+                background-color: #9d1519;
+                color: #F8F9FA;
+            }
+        }
+    }
 `

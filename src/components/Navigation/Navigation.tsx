@@ -4,6 +4,9 @@ import { Home } from '../Home/Home'
 import { Contact } from '../Contact/Contact'
 import { Us } from '../Us/Us'
 import { Services } from '../Services/Services'
+import { Login } from '../Login/Login'
+import LoginContext from '../../context/LoginContext'
+import { useLocalStorage } from '@uidotdev/usehooks'
 
 const router = createBrowserRouter([
     {
@@ -30,10 +33,41 @@ const router = createBrowserRouter([
                 path: '/contacto',
                 element: <Contact />
             },
+            {
+                path: '/login',
+                element: <Login />
+            },
+            {
+                path: '/profile',
+                element: <h3>Perfil</h3>
+            },
+            {
+                path: '/history',
+                element: <h3>Historia</h3>
+            },
+            {
+                path: '/recommendations',
+                element: <h3>Recomendaciones</h3>
+            },
+            {
+                path: '/events',
+                element: <h3>Eventos</h3>
+            },
         ]
     },
 ])
 
 export function Navigation() {
-    return <RouterProvider router={router} />
+    const [token, setToken] = useLocalStorage<string>("token")
+    const [refreshToken, setRefreshToken] = useLocalStorage<string>("refresh_token")
+    return (
+        <LoginContext.Provider value={{
+            token: token,
+            refresh_token: refreshToken,
+            setToken: setToken,
+            setRefreshToken: setRefreshToken
+        }} >
+            <RouterProvider router={router} />
+        </LoginContext.Provider>
+    )
 }
