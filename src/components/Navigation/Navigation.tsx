@@ -7,6 +7,7 @@ import { Services } from '../Services/Services'
 import { Login } from '../Login/Login'
 import LoginContext from '../../context/LoginContext'
 import { useLocalStorage } from '@uidotdev/usehooks'
+import { Profile } from '../Profile/Profile'
 
 const router = createBrowserRouter([
     {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/profile',
-                element: <h3>Perfil</h3>
+                element: <Profile />
             },
             {
                 path: '/history',

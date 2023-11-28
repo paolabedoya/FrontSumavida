@@ -3,6 +3,7 @@ import { StyledForm } from './styles'
 import axios from 'axios'
 import LoginContext from '../../context/LoginContext'
 import { useNavigate } from 'react-router-dom'
+import { Config } from '../../config'
 
 export const Login = () => {
     const navigate = useNavigate()
@@ -13,7 +14,7 @@ export const Login = () => {
     const handleLogin = async (e: unknown): Promise<void> => {
         (e as { preventDefault: () => void }).preventDefault()
         try {
-            const result = await axios.post("http://localhost:4040/api/login", {
+            const result = await axios.post(`${Config.backend_base_url}/login`, {
                 username: email,
                 password: password
             })
