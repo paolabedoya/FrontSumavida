@@ -103,7 +103,7 @@ export const BurgerMenuContent = styled.div<{ isOpen: boolean }>`
     top: 0;
     transition: right .3s ease-out;
     transition: display .3s ease-out;
-    z-index: 0;
+    z-index: 999;
     right: ${({isOpen}) => isOpen ? '0' : '-40rem'};
     display: ${({isOpen}) => isOpen ? 'block' : 'none'};
 

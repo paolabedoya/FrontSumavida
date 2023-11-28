@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledSlider = styled.div`
     position: relative;
-    z-index: -1;
 
     .image-container {
         display: flex;
