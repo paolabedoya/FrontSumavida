@@ -33,7 +33,7 @@ function Header() {
                             <NavLink to={"/"}>Home</NavLink>
                             <NavLink to={"/nosotros"}>Nosotros</NavLink>
                             <NavLink to={"/servicios"}>Servicio</NavLink>
-                            <NavLink to={"/calendario"}>Calendario</NavLink>
+                            <NavLink to={"/eventos"}>Calendario</NavLink>
                             <NavLink to={"/contacto"}>Contacto</NavLink>
                         </>
                     ) : (

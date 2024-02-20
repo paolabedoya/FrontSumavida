@@ -8,6 +8,8 @@ import { Login } from '../Login/Login'
 import LoginContext from '../../context/LoginContext'
 import { useLocalStorage } from '@uidotdev/usehooks'
 import { Profile } from '../Profile/Profile'
+import { Contacts as AdminContacts } from '../Admin/Contacts/Contacts'
+import { NotFound } from '../NotFound/NotFound'
 
 const router = createBrowserRouter([
     {
@@ -16,7 +18,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home />
+                element: <Home />,
+            },
+            {
+                path: '/admin/contactos',
+                element: <AdminContacts />,
             },
             {
                 path: '/nosotros',
@@ -27,8 +33,8 @@ const router = createBrowserRouter([
                 element: <Services />
             },
             {
-                path: '/calendario',
-                element: <h1>Calendario</h1>
+                path: '/eventos',
+                element: <h1>Eventos</h1>
             },
             {
                 path: '/contacto',
@@ -54,7 +60,11 @@ const router = createBrowserRouter([
                 path: '/events',
                 element: <h3>Eventos</h3>
             },
-        ]
+            {
+                path: "*",
+                element: <NotFound />
+            }
+        ],
     },
 ])
 
