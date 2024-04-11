@@ -24,7 +24,7 @@ export const Contact = () => {
         }
 
         try {
-            const result = await axios.post('http://localhost:4040/api/contact', {
+            const result = await axios.post('/api/contact', {
                 name,
                 phone,
                 email,

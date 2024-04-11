@@ -13,7 +13,7 @@ export const Contacts = () => {
     }, [])
 
     const fetchContacts = () => {
-        axios.get('http://localhost:4040/api/contact')
+        axios.get('/api/contact')
             .then(res => {
                 console.log("res: ", res.data)
                 if (res.data.status === 'success') {

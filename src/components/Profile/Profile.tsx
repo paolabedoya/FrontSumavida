@@ -49,7 +49,7 @@ export const Profile = () => {
 
     const fetchUserData = async () => {
         try {
-            const result = await axios.get(`${Config.backend_base_url}/users/me`, {
+            const result = await axios.get('/users/me', {
                 data: {
                     token: token,
                     fetchTrack: true

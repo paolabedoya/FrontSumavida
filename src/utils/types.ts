@@ -103,6 +103,7 @@ export type Region = {
 export type UserRol = "admin" | "patient" | "professional"
 
 export type User = {
+    _id?: string,
     rol: UserRol,
     job_id: number,
     active: boolean,

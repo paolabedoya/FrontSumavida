@@ -14,7 +14,7 @@ export const Login = () => {
     const handleLogin = async (e: unknown): Promise<void> => {
         (e as { preventDefault: () => void }).preventDefault()
         try {
-            const result = await axios.post(`${Config.backend_base_url}/login`, {
+            const result = await axios.post('/login', {
                 username: email,
                 password: password
             })
