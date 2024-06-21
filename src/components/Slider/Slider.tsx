@@ -65,8 +65,8 @@ export function Slider() {
     return (
         <StyledSlider>
             <div className='image-container'>
-                {sliderImages.map(image => (
-                    <img src={image.image} alt='slider image 1' />
+                {sliderImages.map((image, index) => (
+                    <img key={index} src={image.image} alt='slider image 1' />
                 ))}
             </div>
             <div className='slider-button-container'>
@@ -74,8 +74,8 @@ export function Slider() {
                 <div className='slider-information'>
                     {sliderImages[sliderIndex].description}
                     <div className='slider-information__selectors'>
-                        {sliderImages.map((image, index) => {
-                            return <button style={{
+                        {sliderImages.map((_image, index) => {
+                            return <button key={index} style={{
                                 backgroundColor: sliderIndex === index ? '#000000' : 'rgba(0,0,0,.3)'
                             }} onClick={() => setSliderIndex(index)}></button>
                         })}
